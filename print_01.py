@@ -1,16 +1,16 @@
-# ***1.ders birinci örnek****
+ad = "Erdoğan"
+print("Merhaba",ad)
+print('Merhaba',ad)
+print('''Merhaba''',ad)
+print("Merhaba"+ad)
 
-print("merhaba")
-# print("vektorel"*5)
+# input()
 
-abc = 8*3   # abc bir değişkendir.
-# Değişkenler tabaktır.
-# abc = 10
-abc = 5
-10 + 2
-abc = "vektorel"
-print(abc)
-print(8*3)
-print("8*3")
+print('''Eren'in annesi "gel" dedi''')
+# parantezin yanındaki tırnaklardan string içinde kullanılmak istenirse \" şeklinde yazılması gerekir.
+print('''Eren'in annesi "gel" dedi''')
+print('Eren\'in annesi "gel" dedi')
+print('Eren\'in \tannesi \t"gel" \tdedi')
+print('Eren\'in \nannesi \n"gel" \ndedi')
 
-# options -- configure idle - shell -ed -- show line numbers tıkla - satır başına numaralar geliyor.
+# \n, \t gibi değerler python escape characters
