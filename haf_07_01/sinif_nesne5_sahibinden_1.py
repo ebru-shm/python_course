@@ -44,17 +44,29 @@ print("Hayvan1.Yaşı:", hayvan1.Yasi)
 hayvan2 = HayvanAlemi()
 
 class Emlak(Ilan):
-    def __init__(self,fiyati ="Ücretsiz sahiplendirme",no ="0",adres="---",tarih="",tip="-",kredi="olur"):
+    def __init__(self,fiyati ="Ücretsiz sahiplendirme",no ="0",adres="---",tarih="",tip="-",kimden="sahibinden"):
         super().__init__(fiyati,no,adres,tarih)
         self.EmlakTipi = tip
-        self.KrediDurumu = kredi
+        self.KimdenDurumu = kimden
 
 emlak1= Emlak("2500000","8875","Çan/Denizli","2024-11-15","Ev","Uygun")
 print("Emlak tipi:", emlak1.EmlakTipi)
 
 class KiralikEv(Emlak):
-    pass
+     def __init__(self,fiyat ="---",no ="0",adres="---",tarih="",tip="-",kimden="emlakçıdan",depozito=0):
+            super().__init__(fiyat,no,adres,tarih,tip,kimden)
+            self.Depozitos = depozito
 
 class SatilikEv(Emlak):
-    pass
+    def __init__(self,fiyat ="---",no ="0",adres="---",tarih="",tip="-",kimden="emlakçıdan",tapu="Sorunsuz"):
+            super().__init__(fiyat,no,adres,tarih,tip,kimden)
+            self.tapuDurumu = tapu
+
+ilan4 = SatilikEv()
+
+print(ilan4.tapuDurumu)
+
+ilan5 = SatilikEv(tapu ="iskansız",fiyat ="1000000")
+
+print("ilan4.tapuDurumu:",ilan5.tapuDurumu,"\nFiyat:",ilan5.fiyat)
 
