@@ -20,12 +20,7 @@ print(f"Fiyat:\t \t{ilan1.fiyat}\nAdres:\t \t{ilan1.adres}\n\
 
 
 class HayvanAlemi(Ilan):     # Ilan () İlan sınıfından miras alma oluyor.
-    
-    # fiyat = "tanimsiz"          # miras alma sayesinde bu 4 satırı tekrar yazmadık. Bunları Ilan clasından miras aldık.
-    # ilanNo= "yok"
-    # adres = "---"
-    # ilanTarihi = "tanımlanmamış"
-
+       
     Turu = ""
     Irki = ""
     Yasi = ""
@@ -47,3 +42,19 @@ print("Hayvan1.ilanNo:", hayvan1.ilanNo)
 print("Hayvan1.Yaşı:", hayvan1.Yasi)
 
 hayvan2 = HayvanAlemi()
+
+class Emlak(Ilan):
+    def __init__(self,fiyati ="Ücretsiz sahiplendirme",no ="0",adres="---",tarih="",tip="-",kredi="olur"):
+        super().__init__(fiyati,no,adres,tarih)
+        self.EmlakTipi = tip
+        self.KrediDurumu = kredi
+
+emlak1= Emlak("2500000","8875","Çan/Denizli","2024-11-15","Ev","Uygun")
+print("Emlak tipi:", emlak1.EmlakTipi)
+
+class KiralikEv(Emlak):
+    pass
+
+class SatilikEv(Emlak):
+    pass
+
